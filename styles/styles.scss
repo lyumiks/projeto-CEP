@@ -1,0 +1,47 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  background: #90e0ef;
+  padding: 15px 10px;
+  width: auto;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.input {
+  border-radius: 5px;
+}
+
+.inputU {
+  border-radius: 5px;
+  background-color: #edede9;
+}
+
+input#cep {
+  width: 75px;
+}
+
+input#estado {
+  width: 50px;
+}
+
+input#address {
+  width: 300px;
+}
+
+input#bairro {
+  width: 250px;
+}
+
+button#buscar {
+  width: 80px;
+  border-color: #e9edc9;
+  background-color: #ccd5ae;
+  font-weight: bold;
+}
+
+p#error {
+  font-weight: bold;
+}

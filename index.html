@@ -3,16 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <title>Consultar CEP</title>
   </head>
   <body>
+    <h1>Confirme seu endereço</h1>
     <div class="container">
-      <h2>Confirme seu endereço</h2>
-      <input type="text" id="cep" placeholder="00000-000" class="input" />
-      <input type="text" id="address" placeholder="Endereço" class="input" />
-      <input type="text" id="bairro" placeholder="Bairro" class="input" />
-      <input type="text" id="city" placeholder="Cidade" class="input" />
-      <input type="text" id="estado" placeholder="UF" class="input" />
+      <input
+        type="text"
+        id="cep"
+        placeholder="00000-000"
+        class="input"
+        required
+        autofocus
+      />
+      <input
+        type="text"
+        id="address"
+        placeholder="Endereço"
+        class="inputU"
+        readonly
+        tabindex="-1"
+      />
+      <input
+        type="text"
+        id="bairro"
+        placeholder="Bairro"
+        class="inputU"
+        readonly
+        tabindex="-1"
+      />
+      <input
+        type="text"
+        id="city"
+        placeholder="Cidade"
+        class="inputU"
+        tabindex="-1"
+        readonly
+      />
+      <input
+        type="hidden"
+        id="estado"
+        placeholder="UF"
+        class="inputU"
+        readonly
+        tabindex="-1"
+      />
       <button id="buscar">Buscar</button>
     </div>
     <p id="error"></p>
