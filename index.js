@@ -9,9 +9,6 @@ const xhr = new XMLHttpRequest();
 
 function completarEndereco(event) {
   //Pegar o valor do input do CEP
-  cep;
-  console.log(cep.value);
-
   if (cep.value.length < 8) {
     error.innerText = "Caracteres insuficientes";
     return;
@@ -35,6 +32,19 @@ function completarEndereco(event) {
   xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 300) {
       const data = JSON.parse(xhr.responseText);
+      //Fluxo de quando o CEP for inválido - não preencher os campos de rua, bairro, cidade, estado
+      //Saber qual é o retorno de quando o CEP for inválido
+      // {
+      // "erro": "true"
+      // }
+
+      //Criar um argumento no "if" para quando o CEP for inválido
+      if (data.erro == "true") {
+        //Colocar uma mensagem de erro para CEP inválido
+        error.innerText = "CEP inválido";
+        //Condição de que os campos não serão preenchidos
+        return;
+      }
       address.value = data.logradouro;
       bairro.value = data.bairro;
       city.value = data.localidade;
