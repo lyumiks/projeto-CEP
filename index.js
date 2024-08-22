@@ -10,7 +10,7 @@ const xhr = new XMLHttpRequest();
 function completarEndereco(event) {
   //Pegar o valor do input do CEP
   if (cep.value.length < 8) {
-    error.innerText = "Caracteres insuficientes";
+    error.innerText = "Caracteres insuficientes para CEP";
     return;
   } else if (cep.value.length > 8) {
     error.innerText = "Número de caracteres excedido para CEP";
@@ -52,6 +52,10 @@ function completarEndereco(event) {
     } else {
     }
   };
+
+  //Limpar os campos quando o input CEP não constar nenhum valor
+
+  //Tirar a habilitação de selecionar o campo que não pode ser editado
 
   xhr.onerror = function () {};
 

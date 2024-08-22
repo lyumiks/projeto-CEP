@@ -7,16 +7,18 @@ h1 {
   padding: 15px 10px;
   width: auto;
   margin-bottom: 30px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .input {
-  border-radius: 5px;
+  border-radius: 4px;
+  padding: 6px 6px;
 }
 
 .inputU {
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #edede9;
+  padding: 6px 6px;
 }
 
 input#cep {
@@ -37,9 +39,11 @@ input#bairro {
 
 button#buscar {
   width: 80px;
+  padding: 6px;
   border-color: #e9edc9;
   background-color: #ccd5ae;
   font-weight: bold;
+  border-radius: 6px;
 }
 
 p#error {
